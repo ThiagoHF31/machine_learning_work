@@ -1,0 +1,8 @@
+,F1_macro,Accuracy,Balanced_acc,F1_weighted
+Majority,0.164,0.486,0.25,0.318
+Persistence,0.523,0.599,0.522,0.599
+LogisticReg,0.524,0.584,0.547,0.593
+RandomForest,0.53,0.619,0.527,0.613
+HistGradBoost,0.498,0.607,0.497,0.593
+RandomForest_tuned,0.529,0.611,0.529,0.612
+Ensemble,0.524,0.611,0.521,0.609

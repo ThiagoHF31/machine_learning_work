@@ -1,0 +1,4 @@
+,Accuracy,Precision_rain,Recall_rain,F1_rain
+Majority,0.524,0.524,1.0,0.688
+Persistence,0.781,0.791,0.791,0.791
+FINAL (RandomForest_tuned),0.798,0.804,0.812,0.808

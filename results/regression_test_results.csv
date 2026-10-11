@@ -1,0 +1,7 @@
+alvo,modelo,MAE,RMSE,R2,Pearson_r
+Tmax,Persistence,1.51,2.06,0.808,0.904
+Tmax,Climatology,2.139,2.676,0.677,0.853
+Tmax,FINAL (Ensemble),1.277,1.65,0.877,0.942
+Tmin,Persistence,1.107,1.582,0.912,0.956
+Tmin,Climatology,1.79,2.38,0.8,0.895
+Tmin,FINAL (Ensemble),0.967,1.344,0.936,0.968
