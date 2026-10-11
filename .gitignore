@@ -6,3 +6,6 @@ __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 ~$*
+
+# Pacote final de entrega (contém os modelos, ~61 MB)
+submission/
