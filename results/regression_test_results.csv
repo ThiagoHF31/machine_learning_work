@@ -1,4 +1,4 @@
-alvo,modelo,MAE,RMSE,R2,Pearson_r
+target,model,MAE,RMSE,R2,Pearson_r
 Tmax,Persistence,1.51,2.06,0.808,0.904
 Tmax,Climatology,2.139,2.676,0.677,0.853
 Tmax,FINAL (Ensemble),1.22,1.605,0.884,0.942
