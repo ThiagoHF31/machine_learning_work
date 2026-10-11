@@ -1,0 +1,8 @@
+# Modelos treinados: passam de 100 MB (limite do GitHub) e o notebook recria todos ao rodar
+models/
+
+# Arquivos temporários
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+~$*

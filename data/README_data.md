@@ -1,10 +1,13 @@
-# Dados do projeto - Previsão do tempo em Macau
-* Fonte utilizada: Open-Meteo (ERA5)
-* Local: Macau (lat 22.1987, lon 113.5439), fuso Asia/Macau
-* Período: 2014-01-01 a 2025-12-31 (dados diários, 4383 registros)
-* Variáveis: tempmax, tempmin, temp, feelslikemax, feelslikemin, dew, humidity, precip, precipcover, windgust, windspeed, winddir, sealevelpressure, cloudcover, solarenergy, conditions
-* Reproduzir: rode o notebook weather_prediction_macau.ipynb. Ele lê data/raw/*.csv se existir;
-  senão baixa via Visual Crossing (export VC_API_KEY=...) ou Open-Meteo Archive API (sem chave):
-  https://archive-api.open-meteo.com/v1/archive?latitude=22.1987&longitude=113.5439&start_date=2014-01-01&end_date=2025-12-31&timezone=Asia/Macau&daily=...
-* Visual Crossing (manual): https://www.visualcrossing.com/weather-query-builder/ -> Macau,
-  Date range (datas passadas, ~1000 dias por download), Metric, Days, CSV -> salvar em data/raw/visualcrossing/
+# Dados do projeto – Previsão do tempo em Macau
+
+| Arquivo | Origem | Conteúdo |
+|---|---|---|
+| `macao_teacher_data.csv` | Visual Crossing Weather Query Builder (download pedido pela professora) | 15 dias de **previsão** (11/10/2026 a 25/10/2026), unidades americanas. Insuficiente para treinar. |
+| `macao_openmeteo.csv` | Open-Meteo Historical Weather API (reanálise ERA5) | Histórico diário bruto de Macau, 01/01/2014 a 31/12/2025 (4383 dias), nomes de colunas originais da API. |
+| `processed/macau_features_processed.csv` | gerado pelo notebook | Matriz de features + alvos usada nos modelos. |
+
+* Local: Macau (lat 22.1987, lon 113.5439), fuso Asia/Macau.
+* Como reproduzir: rode `notebooks/weather_prediction_macau.ipynb`. Se `macao_openmeteo.csv` não existir, o notebook baixa de
+  https://archive-api.open-meteo.com/v1/archive (sem cadastro) com as variáveis listadas em `notebooks/weather_utils.py`.
+* Para conferir no navegador (10 primeiros dias, CSV):
+  https://archive-api.open-meteo.com/v1/archive?latitude=22.1987&longitude=113.5439&start_date=2014-01-01&end_date=2014-01-10&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,cloud_cover_mean&timezone=Asia%2FMacau&format=csv
